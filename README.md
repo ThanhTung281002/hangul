@@ -55,3 +55,15 @@ flowchart LR
     A --> C
 
 ```
+
+
+
+
+### 7. Cơ sở dữ liệu: 
+words
+-----
+id (PK)
+content
+level
+updated_at
+created_at 
