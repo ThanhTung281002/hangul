@@ -34,7 +34,11 @@ const state = {
 
 
 const app = {
-    state: "PLAYING" || "PAUSE" || initial: "PAUSE"
+    state: "PLAYING" || "PAUSE" || initial: "PAUSE", 
+    intervalId: null, 
+    intervalTime: 2000 || 5000 || 3000 || 1500 || 1000 || 500 || initial: 2000, 
+    words: null, 
+    indexWord: 0; 
 
 }
 
