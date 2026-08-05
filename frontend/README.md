@@ -20,3 +20,24 @@ Làm thôi.
 
 ## UI động: 
 Tới bước này thôi, app này không cần api luôn, vì chỉ cần dữ liệu tĩnh có sẵn ở frontend là đủ rồi. 
+
+
+### State: 
+```javascript
+
+const state = {
+    appState: "PLAYING" || "PAUSE" || initial: "PAUSE",
+    speedMenuOpen: true || false || initial: false, 
+    speedOption: "BEGINNER" || "PRACTICE" || "NORMAL" || "FAST" || "SPEED" || "FLASH" || intial: "NORMAL", 
+    currentWord: initial: "하나님"
+}
+
+
+const app = {
+    state: "PLAYING" || "PAUSE" || initial: "PAUSE"
+
+}
+
+
+
+```

@@ -12,14 +12,68 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body data-theme="light" class="bg-slate-50 h-dvh flex flex-col gap-12 justify-between p-10 py-40">
-    <div class="speed-select bg-white border border-gray-300 flex-none p-2 mx-8 rounded-full text-center shadow-sm">
+    <div  class="relative speed-select bg-white border border-gray-300 flex-none p-2 mx-8 rounded-full text-center shadow-sm z-50">
         <span class="icon text-2xl mr-2">🏃‍♂️</span>
-        <span class="text-xl mr-4 text-gray-700">Normal - 2s</span>
+        <span class="description text-xl mr-4 text-gray-700">Normal - 2s</span>
+
+        <div class="hidden speed-option-menu absolute right-0 top-16 w-full bg-white border border-gray-300 shadow-lg rounded-2xl">
+            <div class="option active:bg-gray-100 p-2 pt-3  rounded-t-2xl flex justify-start items-center pl-10">
+                <span class="icon text-2xl mr-3">🐢</span>
+                <span class="description text-xl mr-4 text-gray-700 active:text-gray-900">Beginner - 5s</span>
+            </div>
+
+            <div class="option active:bg-gray-100 p-2 flex justify-start items-center pl-10">
+                <span class="icon text-2xl mr-3">🚶‍♀️</span>
+                <span class="description text-xl mr-4 text-gray-700 active:text-gray-900">Practice - 3s</span>
+            </div>
+
+            <div class="option active:bg-gray-100 p-2 flex justify-start items-center pl-10">
+                <span class="icon text-2xl mr-3">🏃‍♂️</span>
+                <span class="description text-xl mr-4 text-gray-700 active:text-gray-900">Normal - 2s</span>
+            </div>
+
+            <div class="option active:bg-gray-100 p-2 flex justify-start items-center pl-10">
+                <span class="icon text-2xl mr-3">🚴</span>
+                <span class="description text-xl mr-4 text-gray-700 active:text-gray-900">Fast - 1.5s</span>
+            </div>
+
+            <div class="option active:bg-gray-100 p-2 flex justify-start items-center pl-10">
+                <span class="icon text-2xl mr-3">🚀</span>
+                <span class="description text-xl mr-4 text-gray-700 active:text-gray-900">Speed - 1s</span>
+            </div>
+
+            <div class="option active:bg-gray-100 p-2 pb-3 rounded-b-2xl flex justify-start items-center pl-10">
+                <span class="icon text-2xl mr-3">⚡</span>
+                <span class="description text-xl mr-4 text-gray-700 active:text-gray-900">Flash - 0.5s</span>
+            </div>
+
+            
+        </div>
     </div>
 
-    <div class="word-card bg-white border border-gray-200 text-gray-900 flex-1 rounded-3xl flex justify-center items-center text-6xl shadow-md">
-        하나님
+    <div class="relative word-card bg-white border border-gray-200 text-gray-900 flex-1 rounded-3xl flex justify-center items-center text-6xl shadow-md z-10">
+        <div id="current-word">
+            하나님
+        </div>
+
+        <div id="pause-icon" class="hidden absolute top-20 text-gray-900 bg-white/90 rounded-full p-4 pl-5 pr-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-12">
+                <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+            </svg>
+        </div>
+
+        <div id="play-icon" class="hidden absolute top-20 text-gray-900 bg-white/90 rounded-full p-4 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-12">
+                <path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z" clip-rule="evenodd" />
+            </svg>
+        </div>
     </div>
     
+
+    <div id="overlay" class="hidden fixed inset-0 bg-slate-50/50 z-30"></div>
+
+
+
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
