@@ -121,32 +121,32 @@ function renderSpeedOption() {
     switch (state.speedOption) {
         case "BEGINNER": 
             icon.textContent = "🐢"; 
-            description.textContent = "Beginner - 5s";
+            description.textContent = "Beginner - 10s";
             break; 
         
         case "PRACTICE": 
             icon.textContent = "🚶‍♀️"; 
-            description.textContent = "Practice - 3s";
+            description.textContent = "Practice - 6s";
             break; 
         
         case "FAST": 
             icon.textContent = "🚴"; 
-            description.textContent = "Fast - 1.5s";
+            description.textContent = "Fast - 3s";
             break; 
         
         case "SPEED": 
             icon.textContent = "🚀"; 
-            description.textContent = "Speed - 1s";
+            description.textContent = "Speed - 2s";
             break; 
         
         case "FLASH": 
             icon.textContent = "⚡"; 
-            description.textContent = "Flash - 0.5s";
+            description.textContent = "Flash - 1s";
             break; 
         
         default: 
             icon.textContent = "🏃‍♂️"; 
-            description.textContent = "Normal - 2s";
+            description.textContent = "Normal - 4s";
             break; 
     }
 }
@@ -218,27 +218,27 @@ async function appRun() {
         state.appState = "PLAYING"; 
         switch (state.speedOption) {
             case "BEGINNER": 
-                app.intervalTime = 5000; 
+                app.intervalTime = 10000; 
                 break; 
             
             case "PRACTICE": 
-                app.intervalTime = 3000; 
+                app.intervalTime = 6000; 
                 break; 
             
             case "FAST": 
-                app.intervalTime = 1500; 
+                app.intervalTime = 3000; 
                 break; 
             
             case "SPEED": 
-                app.intervalTime = 1000; 
+                app.intervalTime = 2000; 
                 break; 
             
             case "FLASH": 
-                app.intervalTime = 500; 
+                app.intervalTime = 1000; 
                 break; 
             
             default: 
-                app.intervalTime = 2000; 
+                app.intervalTime = 4000; 
                 break; 
         }
 
